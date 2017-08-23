@@ -48,17 +48,15 @@ class MainActivity : AppCompatActivity(), RequiredParentViewCallback {
 
         if (savedInstanceState != null) {
 
-            val fd = supportFragmentManager.getFragment(savedInstanceState, DETAIL_KEY)
+            if (resources.getBoolean(R.bool.isTablet)) {
+                val fd = supportFragmentManager.getFragment(savedInstanceState, DETAIL_KEY)
+                fd?.let {
 
-            //restore DetailFragment if present
-            fd?.let {
-
-                val tr = supportFragmentManager.beginTransaction()
-
-                if (resources.getBoolean(R.bool.isTablet)) {
                     //recreate fragment due to container id change
                     val refd = DetailFragment()
                     refd.arguments = fd.arguments
+
+                    val tr = supportFragmentManager.beginTransaction()
 
                     if (resources.configuration.orientation == LANDSCAPE) {
                         //put detail into separate container
@@ -69,9 +67,6 @@ class MainActivity : AppCompatActivity(), RequiredParentViewCallback {
                         tr.add(R.id.container, refd, DETAIL_TAG)
                                 .addToBackStack(DETAIL_TAG)
                     }.commit()
-
-                } else {
-                    tr.add(R.id.container, fd, DETAIL_TAG).addToBackStack(DETAIL_TAG).commit()
                 }
             }
 
