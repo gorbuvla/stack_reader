@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/solidWhite"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/list_item_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_centerVertical="true"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#424242"
+        app:civ_fill_color="@color/solidWhite"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/list_item_avatar"
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:id="@+id/list_item_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USername"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/list_item_qtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Q: What is your name homeboiii?"
+            android:maxLines="1"
+            android:textSize="15sp"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/list_item_answered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Answers: 2"
+        android:textSize="12sp"
+        android:textColor="@color/darkGreen"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

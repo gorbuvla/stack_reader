@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StackReader</string>
+    <bool name="isTablet">false</bool>
+</resources>
