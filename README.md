@@ -1,5 +1,6 @@
 # app
-my first app in Kotlin i was asked to code for the job interview
+my first app in Kotlin
+while i haven't used most of Kotlin "killer features", there are definately some advantages when compared to Java
 
 ## Key "features"
 1. loads questions from stackexchange
