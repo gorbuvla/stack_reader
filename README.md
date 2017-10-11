@@ -1,5 +1,6 @@
-# app
+## app
 my first app in Kotlin
+
 while i haven't used most of Kotlin "killer features", there are definately some advantages when compared to Java
 
 ## Key "features"
